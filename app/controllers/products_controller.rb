@@ -3,5 +3,9 @@ class ProductsController < ApplicationController
         products = Product.all
         render json: products.as_json
     end
+
+    def toaster_method
+        product = Product.find_by name: "Toaster"
+        render json: product.as_json
+    end
 end
-        
